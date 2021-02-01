@@ -11,7 +11,7 @@ using namespace std;
 
 string lowercase(string);
 void mainProgram(int guesses = 3, int min = 1, int max = 10); // I used default arguments to simplify code if user does not want to input range
-void checkGuess(int&, int&, int&, int&);
+void checkGuess(int, int&, int&, int&);
 int getMysteryNum(int, int, int);
 
 // --------------------------- //
@@ -109,7 +109,7 @@ void mainProgram(int guesses, int min, int max) {
 
 // Checks user guess and sees if they are "right" (hint hint, they are never right)
 // This also serves to check if the user guess is also in our min to max range 
-void checkGuess(int& guess, int& min, int& max, int& guesses) {
+void checkGuess(int guess, int& min, int& max, int& guesses) {
 	if (guess <= max && guess >= min) { // Makes sure our guess is within our min/max range
 		guesses--; // Subtracts 1 from our guesses
 
